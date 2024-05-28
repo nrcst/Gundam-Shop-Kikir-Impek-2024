@@ -1,4 +1,4 @@
-# Tugas Akhir Pemrograman Website menggunakan laravel
+# Tugas akhir Pemrograman Website menggunakan laravel
 
 ## Table of Contents
 
