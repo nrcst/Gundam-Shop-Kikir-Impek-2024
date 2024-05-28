@@ -4,8 +4,6 @@
 
 - [About](#about)
 - [Anggota Kelompok](#nama_kelompok)
-- [Usage](#usage)
-- [Contributing](../CONTRIBUTING.md)
 
 ## About <a name = "about"></a>
 
