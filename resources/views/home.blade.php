@@ -2,6 +2,8 @@
 @section("title", "Home")
 @section("content")
 
-<h3>...</h3>
+<div style="height: 600px;" class="container-fluid">
+
+</div>
 
 @endsection
