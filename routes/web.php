@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
 
-Route::get('/', [ProductController::class, 'index'])->name('home');
+Route::get('/', [ProductController::class, 'home'])->name('home');
 
 Route::get('/about', function () {
     return view('about');
@@ -30,6 +30,4 @@ Route::get('/orders', function () {
     return view('orders');
 });
 
-Route::get('/gundam', function () {
-    return view('goods.gundam');
-})->name('about');
+Route::get('/gundam', [ProductController::class, 'gundam'])->name('goods.gundam');
