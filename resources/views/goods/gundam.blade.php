@@ -1,4 +1,4 @@
-@extends("layouts.layout")
+@extends("goods_layouts.layout")
 @section("title", "Gundam | Gundam Spot")
 @section("content")
 
