@@ -17,3 +17,15 @@ Route::get('/service', function () {
 Route::get('/help', function () {
     return view('help');
 })->name('help');
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/booking', function () {
+    return view('booking');
+});
+
+Route::get('/orders', function () {
+    return view('orders');
+});
