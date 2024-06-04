@@ -82,23 +82,46 @@
     </div>
 </div>
 
-<div class="container my-5 vstack gap-3 mt-5 mb-5">
+<div class="container my-5">
     <h2 class="text-center" style="color: #3d2b1e;">PRODUCTS</h2>
-    <div class="row g-4">
-        @foreach ($products->sortByDesc('discount') as $product)
-            <div class="col-md-3">
-                <div class="card h-100" style="background-color: #c7b7a3;">
-                    <img src="{{ $product->image }}" class="card-img-top" alt="Product Image" style="object-fit: contain; height: 200px; padding: 10px;">
-                    <div class="card-body d-flex flex-column gap-2">
-                        <h5 class="card-title" style="color: #3d2b1e;">{{ $product->name }}</h5>
-                        <p class="card-text" style="color: #3d2b1e;">Price: Rp. {{ $product->price }}</p>
-                        @if($product->discount)
-                            <span class="badge badge-danger" style="position: absolute; top: 10px; right: 10px;">{{ $product->discount }}% OFF</span>
-                        @endif
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @php
+                $itemCount = 0;
+                $maxItems = 8; // Maximum number of items to display
+                $products = $products->sortByDesc('discount')->take($maxItems);
+                $chunkSize = 4; // Number of items per slide
+                $productChunks = $products->chunk($chunkSize);
+            @endphp
+            @foreach ($productChunks as $productChunk)
+                <div class="carousel-item @if ($loop->first) active @endif">
+                    <div class="row g-4">
+                        @foreach ($productChunk as $product)
+                            <div class="col-md-3">
+                                <div class="list-group-item h-100" style="background-color: #c7b7a3;">
+                                    <img src="{{ $product->image }}" class="list-group-item-img" alt="Product Image" style="object-fit: contain; height: 200px; padding: 10px;">
+                                    <div class="list-group-item-body d-flex flex-column gap-2">
+                                        <h5 class="list-group-item-heading" style="color: #3d2b1e;">{{ $product->name }}</h5>
+                                        <p class="list-group-item-text" style="color: #3d2b1e;">Price: Rp. {{ $product->price }}</p>
+                                        @if($product->discount)
+                                            <span class="badge badge-danger" style="position: absolute; top: 10px; right: 10px;">{{ $product->discount }}% OFF</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </div>
 
