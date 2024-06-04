@@ -7,4 +7,3 @@
             <img src="{{ asset('assets/icongs.png') }}" alt="Acc" style="width: 80px;"></a>
         </ul>
     </div>
-</nav>

@@ -21,13 +21,13 @@
         @endphp
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="{{ route('home') }}" style="color: #574936; font-family: 'sans-serif'; font-weight: bold;" class="nav-link @if($currentRoute == 'home') active @endif">HOME</a></li>
+                <a href="{{ route('home') }}" style="color: #574936; font-weight: bold;" class="nav-link @if($currentRoute == 'home') active @endif">HOME</a></li>
             <li class="nav-item">
-                <a href="{{ route('about') }}" style="color: #574936; font-family: 'sans-serif'; font-weight: bold;" class="nav-link @if($currentRoute == 'about') active @endif">ABOUT US</a></li>
+                <a href="{{ route('about') }}" style="color: #574936; font-weight: bold;" class="nav-link @if($currentRoute == 'about') active @endif">ABOUT US</a></li>
             <li class="nav-item">
-                <a href="{{ route('service') }}" style="color: #574936; font-family: 'sans-serif'; font-weight: bold;" class="nav-link @if($currentRoute == 'service') active @endif">SERVICE</a></li>
+                <a href="{{ route('service') }}" style="color: #574936; font-weight: bold;" class="nav-link @if($currentRoute == 'service') active @endif">SERVICE</a></li>
             <li class="nav-item">
-                <a href="{{ route('help') }}" style="color: #574936; font-family: 'sans-serif'; font-weight: bold;" class="nav-link @if($currentRoute == 'help') active @endif">HELP</a></li>
+                <a href="{{ route('help') }}" style="color: #574936; font-weight: bold;" class="nav-link @if($currentRoute == 'help') active @endif">HELP</a></li>
         </ul>
         </div>
     </div>
