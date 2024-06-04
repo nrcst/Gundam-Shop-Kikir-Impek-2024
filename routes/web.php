@@ -29,3 +29,7 @@ Route::get('/booking', function () {
 Route::get('/orders', function () {
     return view('orders');
 });
+
+Route::get('/gundam', function () {
+    return view('goods.gundam');
+})->name('about');

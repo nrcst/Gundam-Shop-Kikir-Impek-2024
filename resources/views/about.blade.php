@@ -3,7 +3,7 @@
 @section("content")
 
 <div class="vstack gap-3 mt-3 mb-3">
-    <!-- First placeholder: Paragraph text on left and image on right -->
+
     <div class="container-fluid d-flex align-items-center" style="height: 250px; background-color: #e0ceb7;">
         <div class="row w-100">
             <div class="col-md-6 d-flex align-items-center">
@@ -17,7 +17,6 @@
         </div>
     </div>
 
-    <!-- Second placeholder: Paragraph text on right and image on left -->
     <div class="container-fluid d-flex align-items-center" style="height: 250px; background-color: #b29f8e;">
         <div class="row w-100">
             <div class="col-md-6 d-flex justify-content-center">
@@ -31,7 +30,6 @@
         </div>
     </div>
 
-    <!-- Third placeholder: Card with title "Our Team" -->
     <div class="container-fluid" style="background-color: #e0ceb7;">
         <h2 class="text-center" style="color: #3d2b1e;">Our Team</h2>
         <div class="row g-4 justify-content-center">
