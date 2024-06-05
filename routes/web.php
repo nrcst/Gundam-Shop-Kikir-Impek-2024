@@ -36,6 +36,4 @@ Route::get('/management', function () {
     return view('management');
 });
 
-Route::get('/product', function () {
-    return view('product');
-});
+Route::get('/product', [ProductController::class, 'gundam'])->name('product');
