@@ -32,4 +32,10 @@ class ProductController extends Controller
 
         return view('goods.gundam', compact('products'));
     }
+
+    public function product()
+    {
+        $products = Product::all();
+        return view('product', compact('products'));
+    }
 }

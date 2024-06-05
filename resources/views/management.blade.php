@@ -4,8 +4,8 @@
 
 <div style="display: flex; flex-direction: column; align-items: center; background-color: #fef8f0; padding: 20px;">
     <!-- Form untuk menambahkan produk baru -->
-    <!--form action="{{ route('products.store') }}" method="POST" style="width: 100%; max-width: 800px;">
-        @csrf-->
+    <form action="{{ route('products.store') }}" method="POST" style="width: 100%; max-width: 800px;">
+        @csrf
         <!-- Basic Information Section -->
         <div style="background-color: #fff2e0; width: 100%; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
             <h2 style="color: #5a2d0c;">Basic Information</h2>
