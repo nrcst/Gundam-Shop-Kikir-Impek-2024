@@ -8,10 +8,10 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 text-center">
-                        <a href="#" class="btn font-weight-bold btn-block"
+                        <a href="/service/product/gundam" class="btn font-weight-bold btn-block"
                             style="background-color: #f5efe6; color: #3d2b1e;">
                             <img src="{{ asset('assets/service2.png') }}" alt="Service 2" class="img-fluid">
-                            <h5 class="mt-3" style="color: #3d2b1e;">SHOP</h5>
+                            <h5 class="mt-3" style="color: #3d2b1e;">GUNDAM</h5>
                         </a>
                     </div>
                 </div>
@@ -20,7 +20,7 @@
                         <a href="#" class="btn font-weight-bold btn-block"
                             style="background-color: #f5efe6; color: #3d2b1e;">
                             <img src="{{ asset('assets/service2.png') }}" alt="Service 2" class="img-fluid">
-                            <h5 class="mt-3" style="color: #3d2b1e;">CUSTOM</h5>
+                            <h5 class="mt-3" style="color: #3d2b1e;">TAMIYA</h5>
                         </a>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                         <a href="#" class="btn font-weight-bold btn-block"
                             style="background-color: #f5efe6; color: #3d2b1e;">
                             <img src="{{ asset('assets/service2.png') }}" alt="Service 2" class="img-fluid">
-                            <h5 class="mt-3" style="color: #3d2b1e;">CUSTOM</h5>
+                            <h5 class="mt-3" style="color: #3d2b1e;">FIGURE</h5>
                         </a>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                         <a href="#" class="btn font-weight-bold btn-block"
                             style="background-color: #f5efe6; color: #3d2b1e;">
                             <img src="{{ asset('assets/service2.png') }}" alt="Service 2" class="img-fluid">
-                            <h5 class="mt-3" style="color: #3d2b1e;">SHOP</h5>
+                            <h5 class="mt-3" style="color: #3d2b1e;">DETAIL</h5>
                         </a>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                         <a href="#" class="btn font-weight-bold btn-block"
                             style="background-color: #f5efe6; color: #3d2b1e;">
                             <img src="{{ asset('assets/service2.png') }}" alt="Service 2" class="img-fluid">
-                            <h5 class="mt-3" style="color: #3d2b1e;">CUSTOM</h5>
+                            <h5 class="mt-3" style="color: #3d2b1e;">REPAIR</h5>
                         </a>
                     </div>
                 </div>
