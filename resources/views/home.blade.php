@@ -19,74 +19,6 @@
     </div>
 </div>
 
-<div class="container my-5 vstack gap-3 mt-5 mb-5">
-    <h2 class="text-center" style="color: #3d2b1e; font-weight: 700;">EVENT</h2>
-    <div class="row g-4">
-        <div class="row g-4 d-flex align-items-stretch">
-            <div class="col-md-4 d-flex">
-                <div class="card h-100 flex-grow-1"
-                    style="background-color: #c7b7a3; display: flex; flex-direction: column;">
-                    <img src="{{ asset('assets/septemberevn.png') }}" class="card-img-top" alt="Image 1"
-                        style="object-fit: contain; height: 250px; padding: 10px;">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-center flex-grow-1">
-                        <h5 class="card-title text-center" style="color: #3d2b1e; font-weight: 600;">SUMMER SALE</h5>
-                        <p class="card-text text-center" style="color: #3d2b1e;">September 2023</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex">
-                <div class="card h-100 flex-grow-1"
-                    style="background-color: #c7b7a3; display: flex; flex-direction: column;">
-                    <img src="{{ asset('assets/octoberevn.png') }}" class="card-img-top" alt="Image 2"
-                        style="object-fit: contain; height: 250px; padding: 10px;">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-center flex-grow-1">
-                        <h5 class="card-title text-center" style="color: #3d2b1e; font-weight: 600;">SUMMER SALE</h5>
-                        <p class="card-text text-center" style="color: #3d2b1e;">October 2023</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex">
-                <div class="card h-100 flex-grow-1"
-                    style="background-color: #c7b7a3; display: flex; flex-direction: column;">
-                    <img src="{{ asset('assets/marchevent.png') }}" class="card-img-top" alt="Image 3"
-                        style="object-fit: contain; height: 250px; padding: 10px;">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-center flex-grow-1">
-                        <h5 class="card-title text-center" style="color: #3d2b1e; font-weight: 600;">FEMALE BUILDER
-                            CONTEST</h5>
-                        <p class="card-text text-center" style="color: #3d2b1e;">March 2024</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="py-3 vstack gap-3 mt-5 mb-5" style="background-color: #E0CEB7;">
-    <div class="container">
-        <h2 class="text-center my-4" style="color: #3d2b1e; font-weight: 700;">SERVICES</h2>
-        <div class="row g-4 d-flex justify-content-center">
-            <div class="col-md-4 col-sm-6">
-                <div class="card h-100 text-center">
-                    <a href="/service" class="btn font-weight-bold btn-block"
-                        style="background-color: #b29f8e; color: #3d2b1e;">
-                        <img src="{{ asset('assets\productico.png') }}" alt="Service 2" class="img-fluid">
-                        <h5 class="mt-3" style="color: #3d2b1e;">PRODUCT</h5>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="card h-100 text-center">
-                    <a href="/service" class="btn font-weight-bold btn-block"
-                        style="background-color: #b29f8e; color: #3d2b1e;">
-                        <img src="{{ asset('assets\specialityico.png') }}" alt="Service 3" class="img-fluid">
-                        <h5 class="mt-3" style="color: #3d2b1e;">SPECIALITY</h5>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="container my-5">
     <h2 class="text-center" style="color: #3d2b1e; font-weight: 700;">PRODUCTS</h2>
     <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -141,4 +73,72 @@
     </div>
 </div>
 
+
+<div class="container my-5 vstack gap-3 mt-5 mb-5">
+    <h2 class="text-center" style="color: #3d2b1e; font-weight: 700;">EVENT</h2>
+    <div class="row g-4">
+        <div class="row g-4 d-flex align-items-stretch">
+            <div class="col-md-4 d-flex">
+                <div class="card h-100 flex-grow-1"
+                    style="background-color: #c7b7a3; display: flex; flex-direction: column;">
+                    <img src="{{ asset('assets/septemberevn.png') }}" class="card-img-top" alt="Image 1"
+                        style="object-fit: contain; height: 250px; padding: 10px;">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center flex-grow-1">
+                        <h5 class="card-title text-center" style="color: #3d2b1e; font-weight: 600;">SUMMER SALE</h5>
+                        <p class="card-text text-center" style="color: #3d2b1e;">September 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card h-100 flex-grow-1"
+                    style="background-color: #c7b7a3; display: flex; flex-direction: column;">
+                    <img src="{{ asset('assets/octoberevn.png') }}" class="card-img-top" alt="Image 2"
+                        style="object-fit: contain; height: 250px; padding: 10px;">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center flex-grow-1">
+                        <h5 class="card-title text-center" style="color: #3d2b1e; font-weight: 600;">SUMMER SALE</h5>
+                        <p class="card-text text-center" style="color: #3d2b1e;">October 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card h-100 flex-grow-1"
+                    style="background-color: #c7b7a3; display: flex; flex-direction: column;">
+                    <img src="{{ asset('assets/marchevent.png') }}" class="card-img-top" alt="Image 3"
+                        style="object-fit: contain; height: 250px; padding: 10px;">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center flex-grow-1">
+                        <h5 class="card-title text-center" style="color: #3d2b1e; font-weight: 600;">FEMALE BUILDER
+                            CONTEST</h5>
+                        <p class="card-text text-center" style="color: #3d2b1e;">March 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="py-3 vstack gap-3 mt-5 mb-5" style="background-color: #E0CEB7;">
+    <div class="container">
+        <h2 class="text-center my-4" style="color: #3d2b1e; font-weight: 700;">SERVICES</h2>
+        <div class="row g-4 d-flex justify-content-center">
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 text-center" style="background-color: #af8f6f; color: #3d2b1e;">
+                    <a href="/service" class="btn font-weight-bold btn-block">
+                        <img src="{{ asset('assets\productico.png') }}" alt="Service 1" class="img-fluid "
+                            style="max-height: 150px; object-fit: contain;">
+                        <h5 class="mt-3" style="color: #3d2b1e;">PRODUCT</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 text-center" style="background-color: #af8f6f; color: #3d2b1e;">
+                    <a href="/service" class="btn font-weight-bold btn-block">
+                        <img src="{{ asset('assets\specialityico.png') }}" alt="Service 2" class="img-fluid"
+                            style="max-height: 150px; object-fit: contain;">
+                        <h5 class="mt-3" style="color: #3d2b1e;">SPECIALITY</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
