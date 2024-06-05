@@ -33,8 +33,19 @@ class ProductController extends Controller
         return view('goods.gundam', compact('products'));
     }
     
-    public function product()
+    public function product(Request $request)
     {
+        if ($request->has('delete')) {
+            $product = Product::find($request->delete);
+
+            if ($product) {
+                $product->delete();
+                return redirect()->back()->with('success');
+            }
+
+            return redirect()->back()->with('error');
+        }
+
         $products = Product::all();
         return view('products.product', compact('products'));
     }

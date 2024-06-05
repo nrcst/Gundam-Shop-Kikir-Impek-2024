@@ -26,9 +26,9 @@
                     <td style="padding: 10px; border: 1px solid #ccc;">{{ $product->category }}</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">
                         <a href="#" style="margin-right: 10px;">Edit</a>
-                        <form action="#" method="POST" style="display:inline;">
+                        <form action="{{ route('products.product') }}" method="GET" style="display:inline;">
                             @csrf
-                            @method('DELETE')
+                            <input type="hidden" name="delete" value="{{ $product->id }}">
                             <button type="submit" style="color: red; background: none; border: none; cursor: pointer;">Delete</button>
                         </form>
                     </td>
