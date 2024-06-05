@@ -3,38 +3,54 @@
 @section("title", "Gundam | Gundam Spot")
 @section("content")
 
-<div class="search-bar">
-    <input type="text" placeholder="Search...">
-    <button type="submit">Search</button>
-</div>
+<div class="container mt-5">
+    <form method="GET" action="{{ route('goods.gundam') }}" class="mb-3">
+        <div class="input-group">
+            <input type="text" name="search" class="form-control" placeholder="Search in store"
+                value="{{ request()->search }}">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-primary ml-2"
+                    style="width: 150px; background-color: #6f4e37;">Search</button>
+            </div>
+        </div>
+    </form>
+    <form method="GET" action="{{ route('goods.gundam') }}" class="mb-3">
+        <select name="sort" class="form-control" onchange="this.form.submit()">
+            <option value="price" {{ request()->sort == 'price' ? 'selected' : '' }}>Sort by Price</option>
+            <option value="name" {{ request()->sort == 'name' ? 'selected' : '' }}>Sort by Name</option>
+            <option value="category" {{ request()->sort == 'category' ? 'selected' : '' }}>Sort by Category</option>
+        </select>
+        <select name="direction" class="form-control mt-2" onchange="this.form.submit()">
+            <option value="asc" {{ request()->direction == 'asc' ? 'selected' : '' }}>Ascending</option>
+            <option value="desc" {{ request()->direction == 'desc' ? 'selected' : '' }}>Descending</option>
+        </select>
+    </form>
 
-<div class="container">
-    <div class="row scroll-row">
-        @php
-            $chunkCount = 0;
-        @endphp
-        @foreach ($products->sortByDesc('discount')->chunk(4) as $chunk)
-            @php
-                $chunkCount++;
-            @endphp
-            @if ($chunkCount <= 2)
-                @foreach ($chunk as $product)
-                    <div class="col-md-3">
-                        <div class="card h-100" style="background-color: #c7b7a3;">
-                            <img src="{{ $product->image }}" class="card-img-top" alt="Product Image" style="object-fit: contain; height: 200px; padding: 10px;">
-                            <div class="card-body d-flex flex-column gap-2">
-                                <h5 class="card-title" style="color: #3d2b1e;">{{ $product->name }}</h5>
-                                <p class="card-text" style="color: #3d2b1e;">Price: Rp. {{ $product->price }}</p>
-                                @if($product->discount)
-                                    <span class="badge badge-danger" style="position: absolute; top: 10px; right: 10px;">{{ $product->discount }}% OFF</span>
-                                @endif
-                            </div>
-                        </div>
+    <div class="row">
+        @foreach ($products as $product)
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ $product->image }}" class="card-img-top" alt="{{ $product->name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $product->name }}</h5>
+                        <p class="card-text">{{ $product->category }}</p>
+                        <p class="card-text">{{ $product->description }}</p>
+                        <p class="card-text">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
+                        @if($product->discount)
+                            <p class="card-text">Discount: {{ $product->discount }}%</p>
+                        @endif
+                        <p class="card-text">Stock: {{ $product->stock }}</p>
+                        <p class="card-text">{{ $product->preorder ? 'Preorder' : 'Buy now' }}</p>
+                        <a href="#" class="btn btn-primary">{{ $product->preorder ? 'Preorder' : 'Buy now' }}</a>
                     </div>
-                @endforeach
-            @endif
+                </div>
+            </div>
         @endforeach
     </div>
+    <div class="d-flex justify-content-end">
+        {{ $products->links('pagination::bootstrap-4') }}
+    </div>
+</div>
 </div>
 
 @endsection
