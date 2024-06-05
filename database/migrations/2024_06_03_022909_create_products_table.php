@@ -19,6 +19,7 @@ return new class extends Migration
         $table->decimal('price', 8, 2);
         $table->integer('discount')->nullable();
         $table->string('category');
+        $table->boolean('preorder')->default(false);
         $table->timestamps();
     });
 }
