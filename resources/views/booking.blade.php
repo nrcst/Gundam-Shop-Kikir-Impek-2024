@@ -3,22 +3,9 @@
 @section("content")
 
 <div class="row">
-    <div class="col-2 text-left">
-        <div class="container">
-            <div class="vstack gap-3 m-3 mt-5">
-            <div style="font-family: 'sans'; font-weight: bold;" class="container ms-4">
-                    <h4>MENU</h4>
-                </div>
-                <a href="profile" style="text-decoration: none; text" class="button btn-link ms-5">PROFILE</a>
-                <a href="orders" style="text-decoration: none;" class="button btn-link ms-5">ORDERS</a>
-                <a href="booking" style="text-decoration: none;" class="button btn-link ms-5">BOOKING</a>
-                <a href="chat" style="text-decoration: none;" class="button btn-link ms-5">CHAT</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-10 text-left">
+    <div class="col text-left">
         <div class="container mt-5">
-            <h3 style="font-family: 'sans'; font-weight: bold; text-align: center;">Booking Confirmation</h3>
+            <h3 style="color: #412918; font-weight: bold; text-align: center;">Booking Confirmation</h3>
             <div class="card mt-4" style="border: none; padding: 20px; background-color: #b29f8e;">
                 <form>
                     <div class="row mb-3">
