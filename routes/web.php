@@ -32,8 +32,5 @@ Route::get('/orders', function () {
 
 Route::get('/gundam', [ProductController::class, 'gundam'])->name('goods.gundam');
 
-Route::get('/management', function () {
-    return view('management');
-});
-
-Route::get('/product', [ProductController::class, 'gundam'])->name('product');
+Route::get('product', [ProductController::class, 'product'])->name('products.product');
+Route::get('management', [ProductController::class, 'management'])->name('products.management');

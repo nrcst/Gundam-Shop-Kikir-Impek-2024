@@ -18,10 +18,10 @@ class ProductController extends Controller
         $products = Product::all();
         return view('goods.gundam', compact('products'));
     }
-
+    
     public function product()
     {
         $products = Product::all();
-        return view('product', compact('products'));
+        return view('products.product', compact('products'));
     }
 }
