@@ -18,6 +18,7 @@ class ProductsTableSeeder extends Seeder
                 'discount' => 10,
                 'category' => 'Gundam',
                 'preorder' => false,
+                'stock' => 10
             ],
             // Add more sample data as needed
         ];

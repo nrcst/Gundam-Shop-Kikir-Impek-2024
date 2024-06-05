@@ -14,6 +14,7 @@ class Product extends Model
         'discount',
         'category',
         'preorder',
+        'stock'
     ];
 
 }

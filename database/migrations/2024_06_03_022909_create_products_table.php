@@ -20,6 +20,7 @@ return new class extends Migration
         $table->integer('discount')->nullable();
         $table->string('category');
         $table->boolean('preorder')->default(false);
+        $table->integer('stock');
         $table->timestamps();
     });
 }
