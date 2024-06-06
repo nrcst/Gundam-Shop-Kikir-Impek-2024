@@ -29,7 +29,7 @@
                 <h5>Product Details</h5>
                 <div class="row">
                     <div class="col">
-                        <img src="assets/icongs.png" alt="Product Image" class="img-thumbnail" style="width: 150px;">
+                        <img src="https://s6.imgcdn.dev/3TvFC.jpg" alt="Product Image" class="img-thumbnail" style="width: 150px;">
                     </div>
                     <div class="col">
                         <p>RG RX 78-2</p>
