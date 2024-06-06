@@ -1,4 +1,4 @@
-@extends("profile_layouts.layout")
+@extends("product_layouts.layout")
 @section("title", "Product List")
 @section("content")
 

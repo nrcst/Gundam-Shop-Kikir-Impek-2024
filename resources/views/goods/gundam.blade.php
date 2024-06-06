@@ -6,7 +6,7 @@
 <div class="container mt-5">
     <form method="GET" action="{{ route('goods.gundam') }}" class="mb-3">
         <div class="input-group">
-            <input type="text" name="search" class="form-control" placeholder="Search in store"
+            <input style="background-color: #fffbef;" type="text" name="search" class="form-control" placeholder="Search in store"
                 value="{{ request()->search }}">
             <div class="input-group-append">
                 <button type="submit" class="btn btn-primary ml-2"
