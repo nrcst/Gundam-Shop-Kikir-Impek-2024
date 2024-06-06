@@ -28,7 +28,7 @@ class ProductController extends Controller
             $query->orderBy($request->sort, $request->direction == 'desc' ? 'desc' : 'asc');
         }
         
-        $products = $query->paginate(9);
+        $products = $query->paginate(12);
 
         return view('goods.gundam', compact('products'));
     }

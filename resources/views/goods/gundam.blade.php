@@ -28,22 +28,29 @@
 
     <div class="row">
         @foreach ($products as $product)
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{{ $product->image }}" class="card-img-top" alt="{{ $product->name }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $product->name }}</h5>
-                        <p class="card-text">{{ $product->category }}</p>
-                        <p class="card-text">{{ $product->description }}</p>
-                        <p class="card-text">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
+                <a href="" class="list-group-item h-100 flex-grow-1"
+                    style="background-color: #c7b7a3; border-radius: 10px; position: relative; display: flex; flex-direction: column; text-decoration: none;">
+                    <div class="image-container"
+                        style="width: 100%; height: 300px; overflow: hidden; display: flex; justify-content: center; align-items: center; margin-top: 10px;">
+                        <img src="{{ $product->image }}" class="list-group-item-img rounded" alt="Product Image"
+                            style="max-width: 100%; max-height: 100%; object-fit: contain;">
                         @if($product->discount)
-                            <p class="card-text">Discount: {{ $product->discount }}%</p>
+                            <span class="badge badge-danger"
+                                style="position: absolute; top: 10px; right: 10px; background-color: #b29f8e; color: #3d2b1e;">
+                                {{ $product->discount }}% OFF
+                            </span>
                         @endif
-                        <p class="card-text">Stock: {{ $product->stock }}</p>
-                        <p class="card-text">{{ $product->preorder ? 'Preorder' : 'Buy now' }}</p>
-                        <a href="#" class="btn btn-primary">{{ $product->preorder ? 'Preorder' : 'Buy now' }}</a>
                     </div>
-                </div>
+                    <div class="list-group-item-body d-flex flex-column text-center mt-2" style="flex-grow: 1;">
+                        <h5 class="list-group-item-heading mb-1"
+                            style="color: #3d2b1e; font-size: 14px; font-weight: 700;">{{ $product->name }}</h5>
+                        <p class="list-group-item-text" style="color: #3d2b1e; font-size: 12px;">Price: Rp.
+                            {{ number_format($product->price, 0, ',', '.') }}
+                        </p>
+                        <p class="list-group-item-text" style="color: #3d2b1e; font-size: 12px;">Stock: {{ $product->stock }}</p>
+                    </div>
+                </a>
             </div>
         @endforeach
     </div>
@@ -51,6 +58,4 @@
         {{ $products->links('pagination::bootstrap-4') }}
     </div>
 </div>
-</div>
-
 @endsection
