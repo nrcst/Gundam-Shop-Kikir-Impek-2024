@@ -16,12 +16,8 @@
                           </div>
                           <form>
                               <div class="mb-3">
-                                  <label for="firstName" class="form-label" style="color: #412918;">First name</label>
-                                  <input type="text" class="form-control" id="firstName" value="" style="background-color: #dfd5c6; color: #412918;">
-                              </div>
-                              <div class="mb-3">
-                                  <label for="lastName" class="form-label" style="color: #412918;">Last name</label>
-                                  <input type="text" class="form-control" id="lastName" value="" style="background-color: #dfd5c6; color: #412918;">
+                                  <label for="firstName" class="form-label" style="color: #412918;">Name</label>
+                                  <input type="text" class="form-control" id="Name" value="" style="background-color: #dfd5c6; color: #412918;">
                               </div>
                               <div class="mb-3">
                                   <label for="email" class="form-label" style="color: #412918;">Email</label>
@@ -34,15 +30,7 @@
                               <div class="mb-3">
                                   <label for="dateOfBirth" class="form-label" style="color: #412918;">Date of Birth</label>
                                   <div class="d-flex">
-                                      <select class="form-select me-2" id="day" style="background-color: #dfd5c6; color: #412918;">
-                                          <option selected></option>
-                                      </select>
-                                      <select class="form-select me-2" id="month" style="background-color: #dfd5c6; color: #412918;">
-                                          <option selected></option>
-                                      </select>
-                                      <select class="form-select" id="year" style="background-color: #dfd5c6; color: #412918;">
-                                          <option selected></option>
-                                      </select>
+                                  <input style="border: none; background-color: #dfd5c6; color: #766150" type="date" class="form-control" id="date" placeholder="Date">
                                   </div>
                               </div>
                               <div class="mb-3">
@@ -52,7 +40,15 @@
                               <div class="mb-3">
                                   <label for="gender" class="form-label" style="color: #412918;">Gender</label>
                                   <select class="form-select" id="gender" style="background-color: #dfd5c6; color: #412918;">
-                                      <option selected></option>
+                                      <option selected>
+                                        Male
+                                      </option>
+                                      <option>
+                                        Female
+                                      </option>
+                                      <option>
+                                        Other
+                                      </option>
                                   </select>
                               </div>
                               <div class="text-center">
