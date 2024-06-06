@@ -1,8 +1,11 @@
 <?php
 
+use Faker\Provider\bg_BG\PhoneNumber;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Symfony\Component\Routing\Generator\Dumper\GeneratorDumper;
+use function Livewire\of;
 
 return new class extends Migration
 {
@@ -18,6 +21,10 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('usertype')->default('user');
+            $table->string('phone')->nullable();
+            $table->date('date_of_birth')->nullable();
+            $table->text('address_info')->nullable();
+            $table->enum('gender', ['male', 'female', 'other'])->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
