@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/', [ProductController::class, 'home']);
 
@@ -26,9 +27,11 @@ Route::get('/help', function () {
 Auth::routes();
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', function () {
-        return view('profile');
-    })->name('profile');
+
+    Route::get('/profile', [ProfileController::class, 'isAdmin'])->name('profile');
+    Route::middleware(['auth', 'admin'])->group(function () {
+        Route::get('/products/product', [ProductController::class, 'isAdmin'])->name('products.product');
+    });
 
     Route::get('/booking', function () {
         return view('booking');
@@ -44,8 +47,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('/service/product/gundam', [ProductController::class, 'gundam'])->name('goods.gundam');
-    Route::get('product', [ProductController::class, 'product'])->name('products.product');
-    Route::get('management', [ProductController::class, 'management'])->name('products.management');
+    Route::get('/product', [ProductController::class, 'product'])->name('products.product');
     Route::get('/products/add', [ProductController::class, 'add'])->name('products.add');
     Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
     Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('products.edit');
@@ -53,7 +55,7 @@ Route::middleware('auth')->group(function () {
 });
 
 
-require __DIR__.'/auth.php'; // Ensure you have the auth routes included
+require __DIR__ . '/auth.php'; // Ensure you have the auth routes included
 
 // Add these if not already present in auth.php
 Auth::routes();

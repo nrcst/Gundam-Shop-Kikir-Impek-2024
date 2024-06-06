@@ -57,4 +57,15 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+
+    public function isAdmin()
+    {
+        $user = Auth::user();
+
+        if ($user->usertype === 'admin') {
+            return redirect()->route('products.product');
+        }
+
+        return view('profile');
+    }
 }
