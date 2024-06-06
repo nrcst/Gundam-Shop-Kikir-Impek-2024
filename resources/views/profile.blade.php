@@ -35,13 +35,13 @@
                                   <label for="dateOfBirth" class="form-label" style="color: #412918;">Date of Birth</label>
                                   <div class="d-flex">
                                       <select class="form-select me-2" id="day" style="background-color: #dfd5c6; color: #412918;">
-                                          <option selected>31</option>
+                                          <option selected></option>
                                       </select>
                                       <select class="form-select me-2" id="month" style="background-color: #dfd5c6; color: #412918;">
-                                          <option selected>Oct</option>
+                                          <option selected></option>
                                       </select>
                                       <select class="form-select" id="year" style="background-color: #dfd5c6; color: #412918;">
-                                          <option selected>1995</option>
+                                          <option selected></option>
                                       </select>
                                   </div>
                               </div>
@@ -52,7 +52,7 @@
                               <div class="mb-3">
                                   <label for="gender" class="form-label" style="color: #412918;">Gender</label>
                                   <select class="form-select" id="gender" style="background-color: #dfd5c6; color: #412918;">
-                                      <option selected>Male</option>
+                                      <option selected></option>
                                   </select>
                               </div>
                               <div class="text-center">

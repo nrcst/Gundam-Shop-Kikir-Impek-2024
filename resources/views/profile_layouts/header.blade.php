@@ -8,9 +8,9 @@
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Hanuman', sans-serif;
-        }
+        body {font-family: 'Hanuman', sans-serif;}
+        p {color: #574936; font-weight: 600; font-family: 'Hanuman', sans-serif;}
+        h5 {color: #412918; font-weight: 600; font-family: 'Hanuman', sans-serif;}
     </style>
 </head>
 <body style="background-color: #f5efe6;">

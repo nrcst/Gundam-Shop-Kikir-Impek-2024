@@ -3,7 +3,7 @@
         <a href="/" class="navbar-brand">
             <img src="{{ asset('assets/icongs.png') }}" alt="Logo" style="width: 80px;"></a>
         <ul class="navbar-nav ms-auto d-flex flex-row gap-3">
-        <a href="#" class="navbar-brand">
-            <img src="{{ asset('assets/icongs.png') }}" alt="Acc" style="width: 80px;"></a>
+        <a href="/profile" class="navbar-brand">
+            <img src="{{ asset('assets/group.png') }}" alt="Acc" style="width: 42px;"></a>
         </ul>
     </div>

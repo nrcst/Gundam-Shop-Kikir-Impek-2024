@@ -5,12 +5,12 @@
 <div class="row">
     <div class="col text-left">
         <div class="container mt-5">
-            <h3 style="color: #412918; font-weight: bold; text-align: center;">Transaction Details</h3>
+            <h3 style="color: #412918; font-weight: bold; text-align: left;">Transaction Details</h3>
             <div class="card mt-4" style="border: none; padding: 20px; background-color: #f0e3d4;">
                 <h5>Order Completed</h5>
                 <div class="row">
                     <div class="col">
-                        <p>Invoice Number</p>
+                        <p style="font-family: 'Hanuman', sans-serif;">Invoice Number</p>
                     </div>
                     <div class="col">
                         <p>INV/20240527/MPL/3408943630</p>
@@ -38,7 +38,7 @@
                     <div class="col text-end">
                         <p>Total Price</p>
                         <p>Rp385.000</p>
-                        <button type="button" class="btn btn-primary" style="background-color: #a38b6d; border: none;">Buy Again</button>
+                        <button type="button" class="btn btn-primary" style="background-color: #d8ccbd; color: #766252; border: none;">Buy Again</button>
                     </div>
                 </div>
             </div>

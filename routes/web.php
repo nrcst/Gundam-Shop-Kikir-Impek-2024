@@ -34,3 +34,7 @@ Route::get('/service/product/gundam', [ProductController::class, 'gundam'])->nam
 
 Route::get('product', [ProductController::class, 'product'])->name('products.product');
 Route::get('management', [ProductController::class, 'management'])->name('products.management');
+Route::get('/products/add', [ProductController::class, 'add'])->name('products.add');
+Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
+Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('products.edit');
+Route::put('/products/update/{id}', [ProductController::class, 'update'])->name('products.update');
