@@ -21,9 +21,15 @@
         body {
             font-family: 'Hanuman', sans-serif;
         }
+
+        p {
+            font-family: 'Hanuman', sans-serif;
+            font-weight: 700;
+        }
+
         .form-control::placeholder {
         color: #c5b49f;
-        font-weight: 600;
+        font-weight: 500;
     }
     </style>
 </head>

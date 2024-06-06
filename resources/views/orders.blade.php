@@ -38,7 +38,8 @@
                     <div class="col text-end">
                         <p>Total Price</p>
                         <p>Rp385.000</p>
-                        <button type="button" class="btn btn-primary" style="background-color: #d8ccbd; color: #766252; border: none;">Buy Again</button>
+                        <button type="button" class="btn btn-primary"
+                            style="background-color: #d8ccbd; color: #766252; border: none;">Buy Again</button>
                     </div>
                 </div>
             </div>
@@ -65,7 +66,8 @@
                         <p>Address</p>
                     </div>
                     <div class="col">
-                        <p>Sukimin Sukasmin<br>(087817221343)<br>Jl. Bulungan Blok C No.1, RT.11/RW.7,<br>Kramat Pela, Kec. Kby. Baru, Kota Jakarta Selatan,<br>Daerah Khusus Ibukota Jakarta 12130</p>
+                        <p>Sukimin Sukasmin<br>(087817221343)<br>Jl. Bulungan Blok C No.1, RT.11/RW.7,<br>Kramat Pela,
+                            Kec. Kby. Baru, Kota Jakarta Selatan,<br>Daerah Khusus Ibukota Jakarta 12130</p>
                     </div>
                 </div>
             </div>

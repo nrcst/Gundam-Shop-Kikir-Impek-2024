@@ -95,4 +95,49 @@ public function store(Request $request)
     return redirect()->route('products.product')->with('success');
 }
 
+public function show($id)
+{
+    $product = Product::findOrFail($id);
+    return view('goods.show', compact('product'));
+}
+
+public function checkout(Request $request)
+    {
+        $product = Product::find($request->input('product_id'));
+        $quantity = $request->input('quantity');
+
+        $totalPrice = $product->price * $quantity;
+        $shippingCost = 15000;
+        $shippingInsurance = 5500;
+        $serviceFee = 1000;
+        $applicationServiceFee = 1000;
+        $totalBill = $totalPrice + $shippingCost + $shippingInsurance + $serviceFee + $applicationServiceFee;
+
+        return view('goods.summary', [
+            'product' => $product,
+            'quantity' => $quantity,
+            'totalPrice' => $totalPrice,
+            'shippingCost' => $shippingCost,
+            'shippingInsurance' => $shippingInsurance,
+            'serviceFee' => $serviceFee,
+            'applicationServiceFee' => $applicationServiceFee,
+            'totalBill' => $totalBill,
+        ]);
+    }
+
+    public function confirmCheckout(Request $request)
+{
+    $product = Product::find($request->input('product_id'));
+    $quantity = $request->input('quantity');
+
+    if ($product->stock >= $quantity) {
+        $product->stock -= $quantity;
+        $product->save();
+        
+        return redirect('/service/product/gundam')->with('success', 'Checkout successful. Thank you for your purchase!');
+    } else {
+        return redirect()->back()->with('error', 'Not enough stock available.');
+    }
+}
+
 }

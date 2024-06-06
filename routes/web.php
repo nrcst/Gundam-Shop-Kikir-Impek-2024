@@ -38,6 +38,11 @@ Route::middleware('auth')->group(function () {
         return view('orders');
     })->name('orders');
 
+    Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
+    Route::post('/checkout', [ProductController::class, 'checkout'])->name('checkout');
+    Route::post('/checkout/confirm', [ProductController::class, 'confirmCheckout'])->name('checkout.confirm');
+
+
     Route::get('/service/product/gundam', [ProductController::class, 'gundam'])->name('goods.gundam');
     Route::get('product', [ProductController::class, 'product'])->name('products.product');
     Route::get('management', [ProductController::class, 'management'])->name('products.management');

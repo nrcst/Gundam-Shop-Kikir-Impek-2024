@@ -26,7 +26,7 @@
                 @foreach ($products as $product)
                     <tr>
                         <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">{{ $product->name }}</td>
-                        <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">{{ $product->description }}</td>
+                        <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">{{ Str::limit($product->description, 50, '...') }}</td>
                         <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">{{ $product->price }}</td>
                         <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">{{ $product->stock }}</td>
                         <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">{{ $product->category }}</td>
